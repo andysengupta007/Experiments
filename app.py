@@ -14,7 +14,7 @@ if not api_key:
     st.error("Please set the GOOGLE_API_KEY in your environment variables or .env file.")
     st.stop()
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=api_key)
+llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview", google_api_key=api_key)
 
 def extract_text_from_pdf(uploaded_file):
     doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
